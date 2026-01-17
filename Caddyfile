@@ -1,0 +1,7 @@
+sandbox-one.ramoshadriel.dev {
+  reverse_proxy sandbox_1_api:3000
+}
+
+sandbox-three.ramoshadriel.dev {
+  reverse_proxy sandbox_3_api:3000
+}

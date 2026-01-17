@@ -1,13 +1,15 @@
-version: "3.9"
-
 services:
-  sandbox_2_api:
+  sandbox_1_api:
     build: ../sandbox_1
     container_name: sandbox_1_api
+    env_file:
+      - ../sandbox_1/.env
 
   sandbox_3_api:
     build: ../sandbox_3
     container_name: sandbox_3_api
+    env_file:
+      - ../sandbox_3/.env
 
   caddy:
     image: caddy:2

@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  sandbox_2_api:
+    build: ../sandbox_2
+    container_name: sandbox_2_api
+
+  sandbox_3_api:
+    build: ../sandbox_3
+    container_name: sandbox_3_api
+
+  caddy:
+    image: caddy:2
+    container_name: caddy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
